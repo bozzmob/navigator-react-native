@@ -7,3 +7,5 @@ Aim/ToDo :
 - Use Navigator component
 - Try to navigate across components of UI Explorer
 - Pass props as arguments
+
+// Help from : https://github.com/iSimar/HackerNews-React-Native

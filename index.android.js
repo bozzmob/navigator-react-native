@@ -77,7 +77,7 @@ var ProgressBar = React.createClass({
   }
 });
 
-var NavigatorReactNative = React.createClass({
+var ViewPagerAndroidModule = React.createClass({
   statics: {
     title: '<ViewPagerAndroid>',
     description: 'Container that allows to flip left and right between child views.'
@@ -207,4 +207,4 @@ var styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('NavigatorReactNative', () => NavigatorReactNative);
+AppRegistry.registerComponent('ViewPagerAndroidModule', () => ViewPagerAndroidModule);
