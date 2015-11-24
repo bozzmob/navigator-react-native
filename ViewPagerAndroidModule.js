@@ -118,8 +118,7 @@ var ViewPagerAndroidModule = React.createClass({
         <View key={i} style={pageStyle} collapsable={false}>
           <Image
             style={styles.image}
-            source={{uri: IMAGE_URIS[i % BGCOLOR.length]}}
-          />
+            source={{uri: IMAGE_URIS[i % BGCOLOR.length]}} />
           <LikeCount />
        </View>
       );
