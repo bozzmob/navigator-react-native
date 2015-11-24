@@ -74,7 +74,7 @@ var NavigatorReactNative = React.createClass({
       /*console.log("Post - route= "+JSON.stringify(route)+" navigator= "+navigator+" route.index= "+JSON.stringify(route.index)+" route.post= "+JSON.stringify(route.post));*/
       return (
         <View style={{flex: 1}}>
-        <NavToolbar navIcon={true} navigator={navigator}/>
+        <NavToolbar navigator={navigator}/>
         <Listicons index = {route.index} nav={navigator}  />
         </View>
       )

@@ -10,7 +10,6 @@ var {
   TouchableOpacity,
   View,
   ViewPagerAndroid,
-  TouchableHighlight,
 } = React;
 
 var PAGES = 5;
@@ -135,14 +134,8 @@ var ViewPagerAndroidModule = React.createClass({
           <Button text="Next" enabled={page < PAGES - 1} onPress={() => this.move(1)}/>
           <Button text="Last" enabled={page < PAGES - 1} onPress={() => this.go(PAGES - 1)}/>
         </View>
-        <View>
-         <TouchableHighlight onPress={() => this.openGrid()}>
-          <View>
-            <Text>
-              Hello World
-            </Text>
-          </View>
-         </TouchableHighlight>
+        <View style={styles.buttons}>
+         <Button text="Click to Navigate" enabled="true" onPress={() => this.openGrid()} />
         </View>
         <ViewPagerAndroid
           style={styles.viewPager}
