@@ -222,3 +222,4 @@ var styles = StyleSheet.create({
 });
 
 AppRegistry.registerComponent('ViewPagerAndroidModule', () => ViewPagerAndroidModule);
+module.exports = ViewPagerAndroidModule;

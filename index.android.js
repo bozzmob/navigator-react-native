@@ -62,7 +62,7 @@ var NavigatorReactNative = React.createClass({
   renderScene: function(route, navigator) {
     _navigator = navigator;
     if (route.id === 'Home') {
-      console.log("Home - route= "+JSON.stringify(route)+" navigator= "+navigator+" route.index= "+JSON.stringify(route.index)+" route.post= "+JSON.stringify(route.post));
+      /*console.log("Home - route= "+JSON.stringify(route)+" navigator= "+navigator+" route.index= "+JSON.stringify(route.index)+" route.post= "+JSON.stringify(route.post));*/
       return (
         <View style={{flex: 1}}>
         <NavToolbar navigator={navigator}/>
@@ -71,7 +71,7 @@ var NavigatorReactNative = React.createClass({
       );
     }
     if (route.id === 'GridView') {
-      console.log("Post - route= "+JSON.stringify(route)+" navigator= "+navigator+" route.index= "+JSON.stringify(route.index)+" route.post= "+JSON.stringify(route.post));
+      /*console.log("Post - route= "+JSON.stringify(route)+" navigator= "+navigator+" route.index= "+JSON.stringify(route.index)+" route.post= "+JSON.stringify(route.post));*/
       return (
         <View style={{flex: 1}}>
         <NavToolbar navIcon={true} navigator={navigator}/>
@@ -85,7 +85,8 @@ var NavigatorReactNative = React.createClass({
       <Navigator
       initialRoute = {{id: 'Home', index: 0}}
       configureScene={() => Navigator.SceneConfigs.FadeAndroid}
-      renderScene={this.renderScene} />
+      renderScene={this.renderScene}
+      />
     );
   },
 });
