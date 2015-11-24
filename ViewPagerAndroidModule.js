@@ -100,6 +100,12 @@ var ViewPagerAndroidModule = React.createClass({
     this.viewPager && this.viewPager.setPage(page);
     this.setState({page});
   },
+  openGrid: function() {
+    this.props.nav.push({
+      id: 'GridView',
+      index: 2,
+    });
+  },
   render: function() {
     var pages = [];
     for (var i = 0; i < PAGES; i++) {
@@ -128,6 +134,15 @@ var ViewPagerAndroidModule = React.createClass({
           <ProgressBar size={100} progress={this.state.progress}/>
           <Button text="Next" enabled={page < PAGES - 1} onPress={() => this.move(1)}/>
           <Button text="Last" enabled={page < PAGES - 1} onPress={() => this.go(PAGES - 1)}/>
+        </View>
+        <View>
+         <TouchableHighlight onPress={() => this.openGrid()}>
+          <View>
+            <Text>
+              Hello World
+            </Text>
+          </View>
+         </TouchableHighlight>
         </View>
         <ViewPagerAndroid
           style={styles.viewPager}
