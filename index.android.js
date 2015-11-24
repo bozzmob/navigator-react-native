@@ -16,9 +16,8 @@ var {
   BackAndroid
 } = React;
 
-var PostsView = require('./App/Views/Posts');
-var PostView = require('./App/Views/Post');
-var WebView = require('./App/Views/Web');
+var ViewPager = require('./ViewPagerAndroidModule');
+var Listicons = require('./Listicons');
 var _navigator;
 
 
@@ -67,32 +66,21 @@ var NavigatorReactNative = React.createClass({
       return (
         <View style={{flex: 1}}>
         <NavToolbar navigator={navigator}/>
-        <PostsView nav = {navigator} name = { route.name }/>
+        <ViewPager nav = {navigator} name = { route.name }/>
         </View>
       );
     }
-    if (route.id === 'Post') {
+    if (route.id === 'GridView') {
       console.log("Post - route= "+JSON.stringify(route)+" navigator= "+navigator+" route.index= "+JSON.stringify(route.index)+" route.post= "+JSON.stringify(route.post));
       return (
         <View style={{flex: 1}}>
         <NavToolbar navIcon={true} navigator={navigator}/>
-        <PostView index = {route.index} post={route.post} nav={navigator}  />
+        <Listicons index = {route.index} nav={navigator}  />
         </View>
-      )
-    }
-
-    if (route.id === 'WebView') {
-      console.log("WebView - route= "+JSON.stringify(route)+" navigator= "+navigator+" route.index= "+JSON.stringify(route.index)+" route.post= "+JSON.stringify(route.post));
-      return (
-        <View style={{flex: 1}}>
-            <NavToolbar navIcon={true} navigator={navigator}/>
-            <WebView index = {route.index + 1}  title={route.title} url={route.url} />
-          </View>
       )
     }
   },
   render: function() {
-    //console.log("WebView - route= "+route+" navigator= "+navigator+" route.index= "+route.index+" route.post= "+route.post);
     return (
       <Navigator
       initialRoute = {{id: 'Home', index: 0}}
