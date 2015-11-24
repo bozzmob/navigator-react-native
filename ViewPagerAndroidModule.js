@@ -10,6 +10,7 @@ var {
   TouchableOpacity,
   View,
   ViewPagerAndroid,
+  TouchableHighlight,
 } = React;
 
 var PAGES = 5;
