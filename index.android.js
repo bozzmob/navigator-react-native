@@ -36,7 +36,7 @@ var NavToolbar = React.createClass({
           navIcon={{uri: "ic_arrow_back_white_24dp", isStatic: true}}
           onIconClicked={this.props.navigator.pop}
           titleColor="#ffffff"
-          title='Hacker News - Top Stories' />
+          title='Navigator Example' />
       )
     }
     return (
@@ -44,7 +44,7 @@ var NavToolbar = React.createClass({
         style={styles.toolbar}
         onIconClicked={this.props.navigator.pop}
         titleColor="#ffffff"
-        title='Hacker News - Top Stories' />
+        title='Navigator Example' />
     )
   }
 });
@@ -105,20 +105,12 @@ var NavigatorReactNative = React.createClass({
 var styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#F6F6EF',
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+  toolbar: {
+    backgroundColor: '#FF6600',
+    height: 56,
+  }
 });
 
 AppRegistry.registerComponent('NavigatorReactNative', () => NavigatorReactNative);
